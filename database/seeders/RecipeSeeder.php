@@ -2,14 +2,13 @@
 
 namespace Database\Seeders;
 
+use App\Models\Recipe;
 use Illuminate\Database\Seeder;
 
-class DatabaseSeeder extends Seeder
+class RecipeSeeder extends Seeder
 {
     public function run(): void
     {
-        $this->call([
-            RecipeSeeder::class,
-        ]);
+        Recipe::factory(10)->create();
     }
 }
